@@ -8,8 +8,8 @@ function AddWorkerBtn() {
 
   function saveWorker() {
     workers.push({
-      Name: workerName,
-      Stations: workerStations.split(" ").map(Number),
+      name: workerName,
+      stations: workerStations.split(" ").map(Number),
     });
   }
 

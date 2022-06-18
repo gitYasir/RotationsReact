@@ -47,7 +47,11 @@ function ShuffleBtn() {
                 <tr key={worker.name}>
                   <td>{worker.name}</td>
                   {stationsArr[0] ? <td>{stationsArr[0]}</td> : <td></td>}
-                  {stationsArr[1] ? <td>{stationsArr[1]}</td> : <td></td>}
+                  {stationsArr[1] ? (
+                    <td>{stationsArr[1]}</td>
+                  ) : (
+                    <td>{stationsArr[0]}</td>
+                  )}
                   {stationsArr[2] ? (
                     <td>{stationsArr[2]}</td>
                   ) : (
@@ -55,8 +59,10 @@ function ShuffleBtn() {
                   )}
                   {stationsArr[3] ? (
                     <td>{stationsArr[3]}</td>
-                  ) : (
+                  ) : stationsArr[1] ? (
                     <td>{stationsArr[1]}</td>
+                  ) : (
+                    <td>{stationsArr[0]}</td>
                   )}
                   <td onClick={() => removeWorker(worker.name)}>X</td>
                 </tr>
