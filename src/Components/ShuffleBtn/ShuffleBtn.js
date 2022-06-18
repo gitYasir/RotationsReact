@@ -48,8 +48,16 @@ function ShuffleBtn() {
                   <td>{worker.name}</td>
                   {stationsArr[0] ? <td>{stationsArr[0]}</td> : <td></td>}
                   {stationsArr[1] ? <td>{stationsArr[1]}</td> : <td></td>}
-                  {stationsArr[2] ? <td>{stationsArr[2]}</td> : <td></td>}
-                  {stationsArr[3] ? <td>{stationsArr[3]}</td> : <td></td>}
+                  {stationsArr[2] ? (
+                    <td>{stationsArr[2]}</td>
+                  ) : (
+                    <td>{stationsArr[0]}</td>
+                  )}
+                  {stationsArr[3] ? (
+                    <td>{stationsArr[3]}</td>
+                  ) : (
+                    <td>{stationsArr[1]}</td>
+                  )}
                   <td onClick={() => removeWorker(worker.name)}>X</td>
                 </tr>
               );
