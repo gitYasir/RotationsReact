@@ -31,6 +31,13 @@ function ShuffleBtn() {
 
   return (
     <>
+      <button
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
+        Shuffle
+      </button>
       {show && (
         <table>
           <thead>
@@ -71,13 +78,6 @@ function ShuffleBtn() {
           </thead>
         </table>
       )}
-      <button
-        onClick={() => {
-          setShow(!show);
-        }}
-      >
-        Shuffle
-      </button>
     </>
   );
 }
