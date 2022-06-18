@@ -11,8 +11,6 @@ function AddWorkerBtn() {
       Name: workerName,
       Stations: workerStations.split(" ").map(Number),
     });
-    let x = workerStations.split(" ").map(Number);
-    console.log(workers);
   }
 
   return (
