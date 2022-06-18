@@ -1,5 +1,6 @@
 import { useState } from "react";
 import workers from "../../data/db";
+import css from "./styles.module.css";
 
 function ShuffleBtn() {
   const [shuffle, setShuffle] = useState(false);
@@ -70,7 +71,12 @@ function ShuffleBtn() {
                 ) : (
                   <td>{stationsArr[0]}</td>
                 )}
-                <td onClick={() => removeWorker(worker.name)}>X</td>
+                <td
+                  onClick={() => removeWorker(worker.name)}
+                  className={css.hoverDel}
+                >
+                  X
+                </td>
               </tr>
             );
           })}
