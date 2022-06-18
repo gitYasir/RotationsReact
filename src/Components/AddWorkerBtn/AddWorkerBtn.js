@@ -1,11 +1,19 @@
 import { useState } from "react";
+import workers from "../../data/db";
 
 function AddWorkerBtn() {
   const [show, setShow] = useState(false);
   const [workerName, setWorkerName] = useState("");
-  const [workerStations, setWorkerStations] = useState([]);
+  const [workerStations, setWorkerStations] = useState();
 
-  function saveWorker() {}
+  function saveWorker() {
+    workers.push({
+      Name: workerName,
+      Stations: workerStations.split(" ").map(Number),
+    });
+    let x = workerStations.split(" ").map(Number);
+    console.log(workers);
+  }
 
   return (
     <>
@@ -26,7 +34,7 @@ function AddWorkerBtn() {
               setWorkerStations(e.target.value);
             }}
           />
-          <button>Save</button>
+          <button onClick={saveWorker}>Save</button>
           <button
             onClick={() => {
               setShow(!show);

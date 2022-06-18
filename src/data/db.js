@@ -1,8 +1,8 @@
 const workers = [
-  { name: "a", stations: [1, 2, 3, 4] },
-  { name: "v", stations: [2, 3, 4] },
-  { name: "r", stations: [3, 4] },
-  { name: "w", stations: [4, 5, 6, 7, 8] },
+  { name: "Steve", stations: [1, 2, 3, 4] },
+  { name: "Victor", stations: [2, 3, 4] },
+  { name: "Ricky", stations: [3, 4] },
+  { name: "Walker", stations: [4, 5, 6, 7, 8] },
 ];
 
 export default workers;
