@@ -1,9 +1,9 @@
-const workers = [
-  { name: "Steve", stations: [1, 2, 3, 4] },
-  { name: "Victor", stations: [2, 3, 4] },
-  { name: "Ricky", stations: [3, 4] },
-  { name: "Walker", stations: [4, 5, 6, 7, 8] },
-  { name: "Alex", stations: [1] },
+const stations = [
+  { 1: ["Steve", "Alan", "Alex", "James", "Ali", "Mohamed", "Patrick"] },
+  { 2: ["Alex", "James", "Ali", "Mohamed", "Patrick"] },
+  { 3: ["Steve", "Alan", "Alex"] },
+  { 4: ["Ali", "Mohamed", "Patrick"] },
+  { 5: ["Alex", "James", "Alan"] },
 ];
 
-export default workers;
+export default stations;
